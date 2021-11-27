@@ -5,7 +5,9 @@
  */
 package com.gabriel.proyectofinal.repositorios;
 
+
 import com.gabriel.proyectofinal.entidades.Proveedor;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,5 +18,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProveedorRepositorio extends JpaRepository <Proveedor,String>
 {
-    
+    public List<Proveedor> findAllByOrderByNombreAsc();
 }

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/contacto")
 public class ContactoController {
     
-     @GetMapping("/contacto")
+     @GetMapping("/enviarconsulta")
 	public String contacto(ModelMap modelo) {
 		
 		return "contacto";

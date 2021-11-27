@@ -5,7 +5,11 @@
  */
 package com.gabriel.proyectofinal.entidades;
 
+
+import com.gabriel.proyectofinal.enumeraciones.Categoria;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -24,11 +28,21 @@ public class Articulo {
     private String id;
     private String nombre;
     private Double precio;
+    @Enumerated(EnumType.STRING)
+    private Categoria categoria;
     private Integer cantidad;
     private String foto;
     private boolean activo;
     @ManyToOne
     private Proveedor proveedor;
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
     public String getId() {
         return id;

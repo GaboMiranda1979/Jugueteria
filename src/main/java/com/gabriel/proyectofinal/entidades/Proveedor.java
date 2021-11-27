@@ -29,8 +29,7 @@ public class Proveedor {
             private String nombre;
             private String correo;
             private boolean activo;
-            @OneToMany (mappedBy="proveedor", cascade=CascadeType.ALL, orphanRemoval = true)
-            private List<Articulo>articulos;
+            
 
     public String getId() {
         return id;
@@ -64,13 +63,8 @@ public class Proveedor {
         this.activo = activo;
     }
 
-    public List<Articulo> getArticulos() {
-        return articulos;
-    }
-
-    public void setArticulos(List<Articulo> articulos) {
-        this.articulos = articulos;
+    
     }
    
             
-}
+

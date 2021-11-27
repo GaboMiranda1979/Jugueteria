@@ -5,6 +5,7 @@
  */
 package com.gabriel.proyectofinal.configuraciones;
 
+import com.gabriel.proyectofinal.servicios.UsuarioServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
@@ -24,7 +25,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class ConfiguracionesSeguridad extends WebSecurityConfigurerAdapter {
     
-  /* 
+  
     @Autowired
     @Qualifier("usuarioServicio")
     public UsuarioServicio usuarioServicio;
@@ -45,7 +46,7 @@ public class ConfiguracionesSeguridad extends WebSecurityConfigurerAdapter {
 					.loginPage("/login")
 						.loginProcessingUrl("/logincheck")
 						.usernameParameter("correo")
-						.passwordParameter("clave")
+						.passwordParameter("password")
 						.defaultSuccessUrl("/loginsuccess")
 						.failureUrl("/login?error=error")
 						.permitAll()
@@ -56,5 +57,5 @@ public class ConfiguracionesSeguridad extends WebSecurityConfigurerAdapter {
 				.and().csrf()
 					.disable();
 	}
-    */
+    
 }

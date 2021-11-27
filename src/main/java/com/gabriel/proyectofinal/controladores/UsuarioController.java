@@ -6,7 +6,7 @@
 package com.gabriel.proyectofinal.controladores;
 
 import com.gabriel.proyectofinal.Exceptions.WebException;
-import com.gabriel.proyectofinal.servicios.UsuarioServicios;
+import com.gabriel.proyectofinal.servicios.UsuarioServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class UsuarioController {
     
     @Autowired
-    UsuarioServicios usuarioServicio;
+    UsuarioServicio usuarioServicio;
     
     @PostMapping("/registro")
 	public String guardar(ModelMap modelo, @RequestParam String nombre, @RequestParam String apellido,

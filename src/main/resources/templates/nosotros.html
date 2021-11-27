@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sobre Nosotros</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link th:replace="/fragments/head">
+     
+    <div>
+        
+  <style>
+            html,body{   
+                background-image: url("/img/imagenportada.jpg");
+                background-attachment: fixed;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 90%;
+               
+            }
+
+        </style>
+      </div>
+    </head>
+    <body>
+        <div th:replace="/fragments/navbar"></div>
+        <h1>Nuestra Empresa</h1>
+        <br>
+        <h2>Mision</h2>
+        <div>
+            <p>Nuestra Mision es ofrecer artículos de calidad para niños, niñas y jóvenes que desarrollen su imaginación, contribuyan con su aprendizaje y desarrollen sus preferencias y habilidades a futuro. Siendo una empresa socialmente comprometida con los avances en la educación, aprendizaje y entretenimiento, satisfaciendo las necesidades de cada uno de los clientes. </p>
+        </div>
+        
+        <h2>Vision</h2>
+        <div>
+            <p>Nuestra Vision es trascender como una empresa innovadora, especialista en la comercialización de juguetes didácticos y pasatiempos para toda la familia; posicionándose como la empresa líder a nivel nacional e internacional por su calidad de productos y su interés en los niños, jóvenes. </p>
+        </div>
+    </body>
+</html>
